@@ -1,0 +1,1081 @@
+/* *{
+    padding: 0;
+    margin:0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:url(img.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom:20px;
+}
+.login-box {
+    width:750px;
+    background: rgba(255, 255, 255, 0.1);
+    border: solid 2px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 40px 35px 55px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(50px);
+    color: white;
+}
+.input-box {
+    display: flex;
+    justify-content: space-between;
+}
+.input-field{
+    width: 48%;
+    height: 50px;
+    position: relative;
+    margin:13px 0;
+}
+.input-box .input-field input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border-radius:5px;
+    padding: 0 15px 0 28px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    color: white;
+}
+.input-box .input-field i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.input-box .input-field input::placeholder {
+    color: white;
+} */
+
+
+
+
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+body{
+    font-family: "Open Sans", sans-serif;
+    min-height: 100vh;
+    direction: ltr;
+}
+.container {
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background:#0075ff;
+  }
+nav {
+    position: relative;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    background: #424242;
+    opacity: 0.9;
+    z-index: 2;
+}
+nav .three-span {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    width: 45px;
+    height: 35px;
+    border-radius:5px;
+    background: #424242;
+    border: 1px solid black;
+    cursor: pointer;
+    display: none;
+}
+nav .three-span .group span {
+    display: block;
+    margin: 5px auto;
+    border-radius: 20px;
+    width: 22px;
+    height: 2px;
+    background: white;
+}
+nav .three-span .group {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+nav .three-span:hover {
+    background: black;
+}
+nav .two-ul{
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 320px;
+    background: #424242;
+    border-top: 2px solid black;
+    display: none; 
+}
+nav .two-ul ul > li {
+    position: relative;
+}
+nav .three-span:active ~ .two-ul,
+nav .three-span:focus ~ .two-ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+} 
+nav .two-ul ul > li span {
+    position: absolute;
+    width:7px;
+    height: 2px;
+    background: white;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+}
+nav .two-ul ul {
+    position: relative;
+    width: 100%;
+}
+nav .two-ul ul > li {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    color: white;
+    margin: 20px 30px 0 0;
+}
+nav .two-ul ul > li:nth-child(1) {
+    top:0;
+}
+nav .two-ul ul > li:nth-child(2) {
+    top: 50px;
+}
+nav .two-ul ul > li:nth-child(3) {
+    top: 100px;
+}
+nav .two-ul ul > li:nth-child(4) {
+    top: 150px;
+}
+nav .two-ul ul > li:nth-child(5) {
+    top: 200px;
+}
+nav .two-ul ul > li:nth-child(6) {
+    top: 250px;
+}
+nav .two-ul ul > li .one {
+    rotate: 135deg;
+    left: -25px;
+}
+nav .two-ul ul > li .two {
+    rotate: -135deg;
+    left: -28px;
+}
+ul {
+    list-style: none;
+}
+nav > ul  {
+    display: flex;
+}
+nav > ul > li {
+    color: white;
+    padding: 20px 20px 20px 35px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+nav ul li span{
+    position: absolute;
+    width:7px;
+    height: 2px;
+    background: white;
+    top: 50%;
+    transform: translateY(-50%);
+}
+nav ul li .one {
+    rotate: 135deg;
+    left:15px;
+}
+nav ul li .two {
+    rotate: -135deg;
+    left: 13px;
+}
+nav ul li ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+nav ul li ul li {
+    padding:10px;
+}
+nav ul li ul {
+    text-align: right;
+    display: none;
+}
+nav ul li ul {
+    background: #0075ff;
+    border: 2px solid #005cca;
+    border-top: 2.5px solid white;
+    width: 280px;
+    border-radius: 0 0 8px 8px ;
+    position: absolute;
+}
+nav ul li .first {
+    bottom: -235px;
+    left: 0;
+}
+nav ul li .second{
+    bottom:-325px;
+    left: 0;
+}
+nav ul li .three {
+    bottom: -235px;
+    right: 0;
+}
+nav ul li .four {
+    bottom: -370px;
+    right: 0;
+}
+nav ul li .five {
+    bottom: -280px;
+    right: 0;
+}
+nav ul li .six{
+    bottom: -325px;
+    right: 0;
+}
+nav > ul > li:active > ul,
+nav > ul > li:focus > ul {
+    display: block;
+}
+nav > ul > li:active,
+nav > ul > li:focus {
+    background: #0075ff;
+}
+.logo {
+    cursor: pointer;
+}
+header {
+    height: 85vh;
+    background: #0075ff;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+}
+.one-text {
+    padding: 0 30px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    word-spacing: 4px;
+    line-height:1.6;
+}
+header form .search::placeholder {
+    text-align: right;
+    font-size: 22px;
+}
+header form .search {
+    direction: rtl;
+    position: absolute;
+    height: 100%;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    left: 30px;
+    right: 30px;
+    top: 40px;
+    padding: 25px 25px 18px 85px;
+    font-size: 20px;
+    caret-color: #0075ff;
+    color: #0075ff;
+    font-weight: bold;
+}
+header form .submit {
+    position: absolute;
+    top:50%;
+    left:50px;
+    transform: translateY(-50%);
+    margin-top: 40px;
+    border: none;
+    outline: none;
+    color: white;
+    background: #0075ff;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 7px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+header form {
+     text-align: center;
+     height: 60px;
+     width: 100%;
+     position: relative;  
+}
+nav ul li ul li:hover {
+    background:#424242;
+}
+nav > ul > li > ul > li:hover a {
+     margin-right: 5px;
+}
+.one-main {
+    height: 15vh;
+}
+.two-text,
+.three-text,
+.four-text,
+.five-text,
+.six-text,
+.seven-text,
+.eight-text,
+.nine-text,
+.ten-text,
+.eleven-text {
+    text-align: center;
+}
+.two-main,
+.four-main,
+.five-main,
+.seven-main,
+.ten-main,
+.eleven-main {
+    height: 100vh;
+}
+.eight-main{
+    height: 115vh;
+}
+.four-main .boxes > div,
+.five-main .boxes > div,
+.six-main .boxes > div,
+.seven-main .boxes > div,
+.eight-main .boxes > div {
+    background: #f4f6fa; 
+    padding-bottom: 15px;
+}
+.nine-main{
+    height: 110vh;
+}
+.six-main{
+    height: 80vh;
+    margin-top: 60px;
+}
+.eleven-main {
+    padding-top:90px;
+    margin-bottom: 30px;
+    background: #f4f6fa;
+}
+.text h1 {
+    font-weight: 100;
+    color: #333333;
+}
+.two-main h1,
+.three-main h1 {
+    font-size: 70px;
+}
+.four-main h1,
+.seven-main h1,
+.ten-main h1 {
+    font-size: 60px;
+}
+.five-main h1,
+.six-main h1,
+.eight-main h1,
+.eleven-main h1 {
+    font-size: 55px;
+}
+.nine-main h1 {  
+   font-size: 48px;
+}
+.text p {
+    position: relative;
+    color: #444;
+}
+.two-main p,
+.three-main p,
+.eleven-main p {
+    font-size: 30px;
+}
+.four-main p {
+    direction: rtl;
+    font-size: 22px;
+}
+.five-main p,
+.seven-main p,
+.eight-main p,
+.six-main p,
+.ten-main p {
+    font-size: 27px;
+}
+.nine-main p {
+    font-size: 25px;
+}
+.two-main div a {
+    text-decoration: none;
+    color: black;
+}
+ p span{
+    content: "";
+    position: absolute;
+    width:320px;
+    height: 2px;
+    background: #ccc;
+}
+.two-main .two-text p .one ,
+.three-main .three-text p .one,
+.four-main .four-text p .one,
+.five-main .five-text p .one,
+.six-main .six-text p .one,
+.seven-main .seven-text p .one,
+.eight-main .eight-text p .one,
+.nine-main .nine-text p .one,
+.ten-main .ten-text p .one,
+.eleven-main .eleven-text p .one{
+    top:15px;
+    left:35px;
+}
+.two-main .two-text p .two,
+.three-main .three-text p .two,
+.four-main .four-text p .two,
+.five-main .five-text p .two,
+.six-main .six-text p .two ,
+.seven-main .seven-text p .two,
+.eight-main .eight-text p .two,
+.nine-main .nine-text p .two,
+.ten-main .ten-text p .two,
+.eleven-main .eleven-text p .two{
+    top: 19px;
+    left: 35px;
+}
+.two-main .two-text p .three,
+.three-main .three-text p .three,
+.four-main .four-text p .three,
+.five-main .five-text p .three,
+.six-main .six-text p .three ,
+.seven-main .seven-text p .three,
+.eight-main .eight-text p .three,
+.nine-main .nine-text p .three,
+.ten-main .ten-text p .three ,
+.eleven-main .eleven-text p .three {
+    top: 15px;
+    right: 35px;
+}
+.two-main .two-text p .four,
+.three-main .three-text p .four,
+.four-main .four-text p .four,
+.five-main .five-text p .four,
+.six-main .six-text p .four ,
+.seven-main .seven-text p .four,
+.eight-main .eight-text p .four,
+.nine-main .nine-text p .four,
+.ten-main .ten-text p .four,
+.eleven-main .eleven-text p .four{
+    top: 19px;
+    right: 35px;
+}
+.two-main .langs {
+    display: grid;
+    height: 470px;
+    grid-template-columns: repeat(3,300px);
+    grid-template-rows: repeat(3,100px);
+    justify-content: space-evenly;
+    /* justify-content: space-around; */
+    align-content: space-evenly;
+} 
+.two-main .langs div:hover {
+    background: #ccc;
+    transition: 0.3s;
+}
+.two-main .langs div {
+    text-align: center;
+    border-radius: 10px;
+    /* background: #f5f5f5; */
+    background: green;
+    border: 1px solid #f5f5f5;
+    cursor: pointer;
+}
+.two-main .langs div p{
+    font-size: 17px;
+    font-weight: bold;
+}
+.two-main .langs div img {
+    width: 80px;
+    height: 80px;
+}
+.two-main .langs div p,
+.two-main .langs div img{
+    position: relative;
+    bottom: 25px;
+}
+.three-main {
+    height: 90vh;
+}
+.three-main {
+    padding: 80px 0;
+    margin-top: 10vh;
+    background: #f4f6fa;
+}
+.three-main .one-boxes {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 15px;
+}
+.three-main .one-boxes div {
+    width:300px;
+    height: 230px;
+    border-radius: 8px 8px 0 0;
+    direction: rtl;
+    border: 1px solid #ddd;
+    background: white;
+    border-bottom: 2px solid #0075ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.three-main .one-boxes div img {
+    margin-bottom: 20px;
+    width: 110px;
+    height: 110px;
+}
+.three-main .one-boxes div a {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+.four-main .two-boxes div img,
+.five-main .three-boxes div img,
+.six-main .four-boxes div img,
+.seven-main .five-boxes div img,
+.eight-main .six-boxes div img{
+    width:300px;
+    height: 170px;
+}
+.boxes div a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 7px 0 0 12px;
+}
+.four-main .two-boxes div a {
+    font-size: 13px;
+}
+.five-main .three-boxes div a {
+    font-size: 18px;
+    margin-right: 12px;
+}
+.six-main .four-boxes div a,
+.seven-main .five-boxes div a,
+.eight-main .six-boxes div a  {
+    margin-right: 12px;
+}
+.five-main .three-boxes div a ,
+.six-main .four-boxes div a,
+.seven-main .five-boxes div a,
+.eight-main .six-boxes div a {
+    direction: rtl;
+}
+.three-main .boxes div a:hover,
+.four-main .boxes div a:hover,
+.five-main .boxes div a:hover,
+.six-main .boxes div a:hover,
+.seven-main .boxes div a:hover,
+.eight-main .boxes div a:hover,
+.nine-main .divs div a:hover,
+.ten-main .boxes > div > div a:nth-child(1):hover,
+.eleven-main .span-link div a:hover {
+    color: #0075ff;
+    transition: 0.3s;
+}
+section .boxes{
+    margin-top: 70px;
+    position: absolute;
+    left:35px ;
+    right: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content:space-between;
+}
+.four-main .two-boxes {
+    height: 430px;
+}
+.five-main .three-boxes {
+    height: 470px;
+}
+.seven-main .five-boxes {  
+    height: 480px;
+}
+.eight-main .six-boxes {
+    height: 500px;
+}
+.eight-main .eight-text {
+    margin-top: 80px;
+}
+.nine-main .divs {
+    margin-top: 50px;
+    padding-bottom: 100px;
+    background: #f4f6fa;
+    display: grid;
+    grid-template-columns: repeat(2,470px);
+    grid-template-rows: repeat(5,auto);
+    justify-content: space-evenly;
+}
+.nine-main .divs div:nth-child(odd) {
+    margin-left: 35px;
+}
+.nine-main .divs div:nth-child(even) {
+    margin-right: 35px;
+}
+.nine-main .divs > div span {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 12px;
+    color: white;
+    width: 100px;
+    padding: 4px 0;
+    border-radius: 5px;
+}
+.nine-main .divs >  div .one,
+.nine-main .divs >  div .two {
+    background: #d54e21;
+}
+.nine-main .divs  div .three,
+.nine-main .divs  div .four,
+.nine-main .divs  div .six {
+    background: #42b883;
+}
+.nine-main .divs >  div .five,
+.nine-main .divs >  div .eight {
+    background:#f7df1e;
+    color: initial;
+}
+.nine-main .divs >  div .seven,
+.nine-main .divs >  div .nine,
+.nine-main .divs >  div .ten {
+    background: #7552cc;
+}
+.nine-main .divs  div  a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.nine-main {
+    padding-top:70px;
+    margin-bottom: 150px;
+    background:#f4f6fa;
+}
+.nine-main .divs div  {
+    direction: rtl;
+    margin-top: 20px;
+    background: white;
+    padding: 20px 15px 15px 0;
+}
+.nine-main .divs  div bdi {
+    font-size: 12px;
+}
+.ten-main .boxes {
+    display: flex;
+}
+.ten-main .boxes div {
+    width: 48%;
+    height: 110px;
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    direction: rtl;
+    margin-top: 15px;
+    position: relative;
+}
+.ten-main .boxes div a:nth-child(2) {
+    color: #0075ff;
+    position: absolute;
+    bottom:25px;
+    left: 12px;
+}
+.ten-main .boxes div a:nth-child(1) {
+    position: absolute;
+    top:25px;
+    right:calc(12px + 2%);
+} 
+.ten-main .boxes div::before {
+    content: "";
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    left:48px;
+    bottom:17px;
+}
+.ten-main .boxes div a {
+    font-size: 17px;
+}
+.ten-main .boxes {
+    margin-top: 30px;
+    display: flex;
+}
+.eleven-main .span-link div {
+    position: relative;
+    margin-bottom: 30px;
+    width: fit-content;
+}
+.eleven-main .span-link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+.eleven-main .span-link div span {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: #ccc;
+    height: .5px;
+    width: calc(100% + 20px);
+}
+.eleven-main .span-link div a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+footer{
+    height: 80px;
+    background: #000000;
+    color: white;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer .links a {
+    color: white;
+    padding-right: 8px;
+    text-decoration: none;
+}
+footer .links a:hover {
+    color: #0075ff;
+    transition: 0.3s;
+}
+    @media (min-width:770px) and (max-width:790px) {
+    nav .logo {
+        display: none;
+    }
+    p span {
+         width: 200px;
+    }
+    .two-main {
+        height: 115vh;
+    }
+     .two-main .langs {
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .two-main .langs div{
+        
+        width: 340px;
+        margin-bottom: 40px;
+    }
+    .three-main {
+        height: 120vh;
+    }
+    .three-main .one-boxes {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: flex-end;
+    }
+    .three-main .one-boxes .one-box {
+        order: 3;
+    }
+    .three-main .one-boxes .two-box {
+        order: 1;
+    }
+    .three-main .one-boxes .three-box {
+        order: 2;
+    }
+    .three-main .one-boxes > div {
+        width: 345px;
+        height: 185px;
+        margin-right: 18px;
+        margin-bottom: 30px;
+    }
+    .four-main .two-boxes div img,
+    .five-main .three-boxes div img,
+    .six-main .four-boxes div img,
+    .seven-main .five-boxes div img,
+    .eight-main .six-boxes div img {
+        width: 335px;
+    }
+    .four-main .boxes .two,
+    .five-main .boxes .two,
+    .seven-main .boxes .twoو
+    .eight-main .boxes .two {
+        order: 1;
+    }
+    .four-main .boxes .three,
+    .five-main .boxes .three,
+    .seven-main .boxes .three,
+    .eight-main .boxes .three {
+        order: 2;
+    }
+    .four-main .boxes .six,
+    .five-main .boxes .six,
+    .seven-main .boxes .six,
+    .eight-main .boxes .six {
+        order: 3;
+    }
+    .four-main .boxes .one,
+    .five-main .boxes .one,
+    .seven-main .boxes .one,
+    .eight-main .boxes .one {
+        order: 4;
+    }
+    .four-main .boxes .four,
+    .five-main .boxes .four,
+    .seven-main .boxes .four,
+    .eight-main .boxes .four{
+        order: 5;
+    }
+    .four-main .boxes .five,
+    .five-main .boxes .five,
+    .seven-main .boxes .five,
+    .eight-main .boxes .five {
+        order: 6;
+    }
+    .four-main,
+    .five-main,
+    .seven-main,
+    .eight-main {
+        height: 135vh;
+    }
+    .six-main .boxes .two {
+        order: 1;
+        margin-right: 15px;
+    }
+    .six-main .boxes .three {
+        order: 2;
+        
+    }
+    .six-main .boxes .one {
+        order: 3;
+    }
+    .six-main {
+        height: 110vh;
+    }
+    .six-main .boxes {
+        justify-content: flex-end;
+    }
+    .nine-main {
+        height: 155vh;
+    }
+    .nine-main .divs {
+        display: flex;
+        flex-direction: column;
+    }
+    .nine-main .divs .one {
+       order: 2;
+    }
+    .nine-main .divs .two {
+        order: 1;
+    }
+    .nine-main .divs .three {
+        order: 4;
+    }
+    .nine-main .divs .four {
+        order: 3;
+    }
+    .nine-main .divs .five {
+        order: 6;
+    }
+    .nine-main .divs .six {
+        order: 5;
+    }
+    .nine-main .divs .seven {
+        order: 8;
+    }
+    .nine-main .divs .eight {
+        order: 7;
+    }
+    .nine-main .divs .nine {
+        order: 10;
+    }
+    .nine-main .divs .ten {
+        order: 9;
+    }
+    .nine-main .divs div:nth-child(odd) {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .nine-main .divs div:nth-child(even) {
+        margin-right: auto;
+        margin-left: auto;
+    }
+     .nine-main .divs  div {
+        width:95%;
+        background:white;
+    } 
+    .nine-main .divs {
+        display: flex;
+        flex-direction: column;
+    }
+    .ten-main {
+        height: 145vh;
+    }
+    .ten-main .boxes {
+        width: 94%;
+    }
+    .ten-main .boxes div {
+        width: 100%;
+    }
+    .ten-main .boxes .four {
+        order: 3;
+    }
+    .ten-main .boxes .one {
+        order: 2;
+    }
+    .ten-main .boxes .five {
+        order: 6;
+    }
+    .ten-main .boxes .two {
+        order: 1;
+    }
+    .ten-main .boxes .six {
+        order: 5;
+    }
+    .ten-main .boxes .three {
+        order: 4;
+    } 
+}
+ @media (min-width:585px) and (max-width:769px) {
+    nav {
+        height: 70px;
+        justify-content: flex-end;
+    }
+    nav .logo {
+        margin-right: 20px;
+    }
+    nav ul {
+        display: none;
+    }
+    nav .three-span {
+        display: block;
+    }
+    nav .three-span:focus ~ .two-ul {
+        display:block;
+    }
+    nav .three-span:focus ~ .two-ul ul  {
+        display:flex;
+        flex-direction: column;
+    }
+    .two-main {
+        height: 115vh;
+    }
+    .two-main .langs {
+       display: flex;
+       flex-wrap: wrap;
+    }
+    .two-main .langs div {
+        max-width: 700px;
+        min-width: 330px;
+    }
+    /* .two-main .langs {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns:repeat(2,minmax(280px,1fr));
+        grid-template-rows: repeat(4,100px);
+        gap: 20px;
+    } */
+    .two-main .langs div {
+         margin-right: 15px;
+         margin-left: 15px;
+    }
+    /* .two-main .text p span {
+        width: 200px;
+    } */
+     
+}
+@media (max-width:584px) {
+    nav {
+        height: 70px;
+        justify-content: flex-end;
+    }
+    nav .logo {
+        margin-right: 20px;
+    }
+    nav ul {
+        display: none;
+    }
+    nav .three-span {
+        display: block;
+    }
+    nav .three-span:focus ~ .two-ul {
+        display:block;
+    }
+    nav .three-span:focus ~ .two-ul ul  {
+        display:flex;
+        flex-direction: column;
+    }
+    .two-main {
+        height: 190vh;
+    }
+    .two-main .langs {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: minmax(280px,1fr);
+        row-gap: 25px;
+    }
+    .two-main .langs div {
+        margin-right:15px;
+        margin-left: 15px;
+    }
+}
+@media (max-width:773px) and (min-width:665px) {
+    .three-main .one-boxes div {
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+    
+ 
+
+
+
+
+
+
+
